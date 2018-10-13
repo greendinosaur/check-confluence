@@ -3,7 +3,7 @@ from ConfluenceRequest import ConfluenceRequest
 import configparser
 
 class ConfluenceRequestHelper:
-    #api_url_base = 'https://devaardvark.atlassian.net/wiki/rest/api/content'
+
     config = configparser.ConfigParser()
     config.read('config.ini')
 
