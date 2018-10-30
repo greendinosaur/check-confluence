@@ -1,10 +1,7 @@
 Feature: Check URL Exists
   # This tests some real URLs for being valid Confluence references
 
-  #https://devaardvark.atlassian.net/wiki/spaces/DEV/pages/3670017/test+page+with+attachment
-  #https://devaardvark.atlassian.net/wiki/download/attachments/3670017/apple-logo_318-40184.jpg?api=v2
-#https://devaardvark.atlassian.net/wiki/x/AQA4
-  #https://devaardvark.atlassian.net/wiki/pages/viewpage.action?pageId=3866626
+
 
   Scenario Outline: Test URLs
     # Enter steps here
