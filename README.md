@@ -1,6 +1,8 @@
 # check-confluence
 Simple python classes that check a given Confluence URL exists on a server.
 
+This has been tested against a Confluence cloud instance. Unknown as to whether it works on Confluence Server.
+
 To use:
 * ensure there is a *config.ini* file in the root folder with the parameters set correctly. This is used to define the Confluence instance to call. Check out the *EXAMPLEconfig.ini* file for the parameters
 * Pass in the username and password used to authenticate against Confluence into an instance of *ConfluenceRequest*
