@@ -1,0 +1,34 @@
+swagger: "2.0"
+info:
+  description: This is the swagger file that goes with our server code
+  version: "1.0.0"
+  title: Swagger REST definitions
+consumes:
+  - application/json
+produces:
+  - application/json
+
+basePath: /api
+
+# Paths supported by the server application
+paths:
+  /confluence:
+    get:
+      operationId: confluence.check_validity
+      tags:
+        - Confluence
+      summary: Checks to see if a page exists
+      description: Given a URL, checks if it exists on the Confluence site
+      parameters:
+        - name: url
+          in: query
+          type: string
+          description: url to check
+          required: true
+      responses:
+        200:
+          description: Successfully checked url
+          schema:
+            properties:
+              exists:
+                type: string
