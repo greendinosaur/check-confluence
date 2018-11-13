@@ -174,10 +174,11 @@ class ConfluenceRequestHelper:
         """
         if resp_json is not None:
             if 'results' in resp_json:
-                if 'type' in resp_json['results'][0]:
-                    return True
-                elif 'by' in resp_json['results'][0]:
-                    return True
+                if len(resp_json['results']) > 0:
+                    if 'type' in resp_json['results'][0]:
+                        return True
+                    elif 'by' in resp_json['results'][0]:
+                        return True
             elif 'type' in resp_json:
                 if resp_json['type'] == 'page':
                     return True
