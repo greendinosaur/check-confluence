@@ -103,6 +103,7 @@ class TestConfluenceHelper(unittest.TestCase):
         test_json = {"type": "url"}
         self.assertTrue(conf_reg_helper.does_page_exist(test_json))
 
+
     def test_does_page_exist_results_invalid(self):
         """
         checks that invalid JSON for a page is determined as being invalid
@@ -128,6 +129,9 @@ class TestConfluenceHelper(unittest.TestCase):
         """
         conf_reg_helper = ConfluenceRequestHelper(confluence_request=0, pageid='123', attachment='ABCD')
         test_json = {"results": [{"typeasd": "ABCDEFG"}]}
+        self.assertFalse(conf_reg_helper.does_page_exist(test_json))
+
+        test_json = {"results": "hello"}
         self.assertFalse(conf_reg_helper.does_page_exist(test_json))
 
         test_json = {"resultsdddd": [{"typeasd": "ABCDEFG"}]}
